@@ -44,10 +44,11 @@ for url1 in urls:
 
         if last_item == content.index(i):
             mydoc.add_paragraph("Kết thúc " + i.text)
-            mydoc.save('a.docx')
             s = "="
             for r in range(1, 80):
                 s += "="
+            mydoc.add_paragraph(s)
+            mydoc.save('a.docx')
         else:
             mydoc.add_paragraph(i.text)
             mydoc.save('a.docx')
